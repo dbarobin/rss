@@ -55,14 +55,17 @@ def main():
     f.write(OPML_START % {'today': today})
     f.write('\n')
 
-    with open('liqi-blog.log') as inf:
-        for line in inf:
+    with open('liqi-blog.log') as liqi:
+        for line in liqi:
             parts = line.split(',')
             url = str(parts[0].rstrip())
             title = str(get_tile(url).lstrip().rstrip())
 
             if len(parts) > 1:
                 feed = str(parts[1].rstrip())
+            else:
+                feed = ""
+
             f.write(OPML_OUTLINE_FEED % {'title': title, 'xml_url': feed, 'htmlUrl': url})
             f.write('\n')
 
