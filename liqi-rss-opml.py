@@ -55,7 +55,7 @@ def main():
     f.write(OPML_START % {'today': today})
     f.write('\n')
 
-    with open('blog.log') as inf:
+    with open('liqi-blog.log') as inf:
         for line in inf:
             parts = line.split(',')
             url = str(parts[0].rstrip())

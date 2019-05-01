@@ -9,8 +9,8 @@ Installation via git clone or download this repo.
 ## Usage
 
 1. Git clone or download zip
-2. Edit `blog.log` file which separated with comma
-3. Execute `python rss-opml.py`, python 2.7+ required
+2. Edit `liqi-blog.log` file which separated with comma
+3. Execute `python liqi-rss-opml.py`, python 2.7+ required
 4. Import opml file to RSS reader like Reeder
 5. Enjoy RSS!
 
